@@ -1,7 +1,8 @@
 {
   "extras": [
     "lazyvim.plugins.extras.lang.clangd",
-    "lazyvim.plugins.extras.lang.cmake"
+    "lazyvim.plugins.extras.lang.cmake",
+    "lazyvim.plugins.extras.dap.core"
   ],
   "install_version": 8,
   "news": {
