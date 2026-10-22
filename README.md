@@ -66,8 +66,6 @@ Mason instala os LSPs/ferramentas. Pronto.
   entre máquinas — são específicas de cada uma; o Neovim recria do zero.
 - O `lazy-lock.json` **não** é versionado (está no `.gitignore`), então cada
   máquina usa/congela suas próprias versões de plugins sem conflito de merge.
-- Fora do Omarchy (outras máquinas), o `omarchy-theme.lua` se desliga sozinho e
-  fica o tema default do LazyVim.
 
 ---
 
