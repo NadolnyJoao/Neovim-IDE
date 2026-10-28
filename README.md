@@ -18,13 +18,14 @@ depurar direto do editor, com suporte completo a projetos **CMake**.
 
 1. [Requisitos](#1-requisitos)
 2. [Instalação (clone)](#2-instalação-clone)
-3. [Estrutura de arquivos](#3-estrutura-de-arquivos)
-4. [O que está configurado](#4-o-que-está-configurado)
-5. [Atalhos](#5-atalhos)
-6. [Fluxos de trabalho](#6-fluxos-de-trabalho)
-7. [LSP, Mason, formatação e lint](#7-lsp-mason-formatação-e-lint)
-8. [Depuração (DAP)](#8-depuração-dap)
-9. [Dicas e manutenção](#9-dicas-e-manutenção)
+3. [Windows](#3-windows)
+4. [Estrutura de arquivos](#4-estrutura-de-arquivos)
+5. [O que está configurado](#5-o-que-está-configurado)
+6. [Atalhos](#6-atalhos)
+7. [Fluxos de trabalho](#7-fluxos-de-trabalho)
+8. [LSP, Mason, formatação e lint](#8-lsp-mason-formatação-e-lint)
+9. [Depuração (DAP)](#9-depuração-dap)
+10. [Dicas e manutenção](#10-dicas-e-manutenção)
 
 ---
 
@@ -55,9 +56,13 @@ sudo pacman -S --needed ttf-jetbrains-mono-nerd
 
 ## 2. Instalação (clone)
 
+**Linux / macOS:**
+
 ```bash
 git clone git@github.com:NadolnyJoao/Neovim-configs.git ~/.config/nvim
 ```
+
+**Windows:** veja [WINDOWS.md](WINDOWS.md) — clone em `%LOCALAPPDATA%\nvim` (também funciona com [Neovide](https://neovide.dev/)).
 
 Depois abra o `nvim`: o lazy.nvim faz o bootstrap, baixa todos os plugins e o
 Mason instala os LSPs/ferramentas. Pronto.
@@ -67,9 +72,13 @@ Mason instala os LSPs/ferramentas. Pronto.
 - O `lazy-lock.json` **não** é versionado (está no `.gitignore`), então cada
   máquina usa/congela suas próprias versões de plugins sem conflito de merge.
 
+## 3. Windows
+
+Guia prático em [WINDOWS.md](WINDOWS.md): instalar Neovim/Neovide, clonar em `%LOCALAPPDATA%\nvim`, toolchain MinGW/LLVM + CMake/ripgrep/fd e primeira execução.
+
 ---
 
-## 3. Estrutura de arquivos
+## 4. Estrutura de arquivos
 
 ```
 ~/.config/nvim/
@@ -96,7 +105,7 @@ Mason instala os LSPs/ferramentas. Pronto.
 
 ---
 
-## 4. O que está configurado
+## 5. O que está configurado
 
 ### Extras (`lazyvim.json`)
 
@@ -137,7 +146,7 @@ Mason instala os LSPs/ferramentas. Pronto.
 
 ---
 
-## 5. Atalhos
+## 6. Atalhos
 
 > `<leader>` é a **barra de espaço**. Aperte <kbd>Espaço</kbd> e espere: o
 > which-key mostra tudo.
@@ -199,7 +208,7 @@ Mason instala os LSPs/ferramentas. Pronto.
 
 ---
 
-## 6. Fluxos de trabalho
+## 7. Fluxos de trabalho
 
 ### Arquivo único (`.c`)
 
@@ -226,7 +235,7 @@ Mason instala os LSPs/ferramentas. Pronto.
 
 ---
 
-## 7. LSP, Mason, formatação e lint
+## 8. LSP, Mason, formatação e lint
 
 - **Mason** (`:Mason`) gerencia LSPs/ferramentas. Já instalados neste setup:
   `clangd`, `neocmakelsp`, `lua-language-server`, `cmakelang`, `cmakelint`,
@@ -237,7 +246,7 @@ Mason instala os LSPs/ferramentas. Pronto.
   liga/desliga: `<leader>uf`.
 - **Treesitter** dá realce/seleção por sintaxe.
 
-## 8. Depuração (DAP)
+## 9. Depuração (DAP)
 
 1. `<leader>db` para pôr breakpoint.
 2. `<leader>dc` para iniciar (ou `<leader>md` num projeto CMake).
@@ -247,7 +256,7 @@ Mason instala os LSPs/ferramentas. Pronto.
 
 ---
 
-## 9. Dicas e manutenção
+## 10. Dicas e manutenção
 
 - <kbd>Espaço</kbd> + espera → which-key lista os atalhos.
 - `:Lazy` (plugins), `:Mason` (ferramentas), `:LazyExtras` (extras),
